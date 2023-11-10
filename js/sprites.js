@@ -7,10 +7,10 @@ function Sprite2D(padre, posx, posy, posz, name, id, visible) {
   this.spriteMaterial2 = new THREE.SpriteMaterial({ color: 0xffffff });
   
   this.sprite = new THREE.Sprite(this.spriteMaterial);
-  // this.sprite.position.set(posx, posy, posz);
+  this.sprite.position.set(posx, posy, posz);
   this.id = id;
   this.sprite.name = name;
-  // this.sprite.rotation.x =-25;
+  this.sprite.rotation.y =-25;
 
   this.sprite.scale.x = 15;
   this.sprite.scale.y = 20;
