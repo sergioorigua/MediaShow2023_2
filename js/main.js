@@ -67,6 +67,8 @@ var categorias = [
   "Backing",
   "Pitch",
   "Modelado",
+  "Hubs",
+  "Iglesia"
 ];
 
 /// MODALS / TARJETAS
@@ -101,7 +103,16 @@ var desarrolloModal = new bootstrap.Modal(
   {}
 );
 var desarrolloId = document.getElementById("myCardDesarrollo");
-
+var hubsModal = new bootstrap.Modal(
+  document.getElementById("myCardHubs"),
+  {}
+);
+var hubsId = document.getElementById("myCardHubs");
+var twitchModal = new bootstrap.Modal(
+  document.getElementById("myCardTwitch"),
+  {}
+);
+var  twitchId = document.getElementById("myCardTwitch");
 // mouse test
 
 let drag;
@@ -133,7 +144,9 @@ function Mousedown(e) {
     mediaShortsId.style.display != "block" &&
     backingId.style.display != "block" &&
     pitchId.style.display != "block" &&
-    desarrolloId.style.display != "block"
+    desarrolloId.style.display != "block" &&
+    hubsId.style.display != "block" &&
+    twitchId.style.display != "block"
   ) {
     switch (mouseLookAt) {
       case "none":
@@ -162,6 +175,14 @@ function Mousedown(e) {
         desarrolloModal.show();
         mouseLookAt = "none";
         break;
+      case "Hubs":
+          hubsModal.show();
+          mouseLookAt = "none";
+          break;
+      case "Iglesia":
+          twitchModal.show();
+          mouseLookAt = "none";
+          break;
       default:
         break;
     }
@@ -224,6 +245,10 @@ document.addEventListener(
   },
   true
 );
+
+var spriteHubs =  new Sprite2D(isla, -10,0,0, "hubs", 0, false)
+
+
 ///////////////////////////////////////
 // IMPORT
 var cutuluFbx = new loadFBX(
@@ -481,12 +506,14 @@ function animate() {
 animate();
 
 function closeModal(){
-  modeladoId.style.display = "none";
+    modeladoId.style.display = "none";
     videojuegosId.style.display = "none";
     mediaShortsId.style.display = "none"; 
     backingId.style.display = "none";
     pitchId.style.display = "none";
     desarrolloId.style.display = "none";
+    hubsId.style.display = "none";
+    twitchId.style.display = "none";
 }
 
 function render() {
@@ -504,14 +531,21 @@ function render() {
   mediaShortsId.style.display != "block" &&
   backingId.style.display != "block" &&
   pitchId.style.display != "block" &&
-  desarrolloId.style.display != "block") {
+  desarrolloId.style.display != "block" &&
+  hubsId.style.display != "block") {
+    if (intersects[0].object.name == "hubs") {
+      setHighlight(categorias[6], intersects);
+    } else
     if (intersects[0].object.name == "Columna_4") {
       setHighlight(categorias[0], intersects);
     } else if (intersects[0].object.name == "Columna_1") {
       setHighlight(categorias[2], intersects);
     } else if (intersects[0].object.name == "Columna_2") {
       setHighlight(categorias[3], intersects);
-    } else if (intersects[0].object.name == "Columna_3") {
+    } else if (intersects[0].object.name == "iglesia") {
+      setHighlight(categorias[7], intersects);
+    }
+     else if (intersects[0].object.name == "Columna_3") {
       setHighlight(categorias[5], intersects);
     } else if (intersects[0].object.name == "Columna_5") {
       setHighlight(categorias[4], intersects);
@@ -536,14 +570,18 @@ function render() {
 function setHighlight(cursorlookAt, intersects) {
   document.body.style.cursor = "pointer";
   mouseLookAt = cursorlookAt;
-  if (INTERSECTED != intersects[0].object) {
-    if (INTERSECTED)
-      INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
-
-    INTERSECTED = intersects[0].object;
-    INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
-    INTERSECTED.material.emissive.setHex(highlightColumnColor);
+  if(intersects[0].object.name=="hubs"){
+    mouseLookAt = cursorlookAt;
+  }else{
+    if (INTERSECTED != intersects[0].object) {
+      if (INTERSECTED)
+        INTERSECTED.material.emissive.setHex(INTERSECTED.currentHex);
+      INTERSECTED = intersects[0].object;
+      INTERSECTED.currentHex = INTERSECTED.material.emissive.getHex();
+      INTERSECTED.material.emissive.setHex(highlightColumnColor);
+    }
   }
+  
 }
 
 function cameramov() {
