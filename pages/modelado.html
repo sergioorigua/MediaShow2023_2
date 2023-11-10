@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/projects.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p style="font-size: 5vw" class="titulo" id="categoriaTitle">Mediashow</p>
+      <img src="../Imagenes/fondo1.png" alt="" srcset="" style="width: 100%" />
+      <div class="contenido" id="capa">
+        <!-- <a class="tarjeta" href="">
+          <img src="fondo2.png" alt="cartoon image" class="miniatura" />
+          <div clas="colum">
+            <div class="titleproject">Titulo</div>
+            <div class="separator"></div>
+            <div class="autor">Sergio Daniel Origua</div>
+          </div>
+        </a> -->
+      </div>
+    </div>
+    <script type="module">
+      var capa = document.getElementById("capa");
+      var categoria = document.getElementById("categoriaTitle");
+
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get("type");
+      console.log(type);
+      /////////////////////////////
+      /// MODELADO
+      if (type == "Modelado") {
+        categoria.innerHTML = "Mediashow<br />Modelado 3D";
+        crearTarjeta(
+          "../pages/modelado/mod1.png",
+          "🤡 ♥ ♥ ♥ Laughing jill ♥ ♥ ♥🤡",
+          "Camila Andrea Campo Herrera",
+          "https://sketchfab.com/3d-models/laughing-jill-80fc90a6993348dead677720939f0a09"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod2.png",
+          "Media Show 2023 - 2",
+          "Valeria González Osorio",
+          "https://sketchfab.com/3d-models/media-show-2023-2-01cfc7a85a904a36b98adcecced5f6d7"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod3.png",
+          "Scarlet Fitch - Silent Hill",
+          "Juan Camilo Valdés Lozano",
+          "https://sketchfab.com/3d-models/silent-hill-en-proceso-cf7a13097f1b422792d33e9cc9a711bb"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod4.png",
+          "MediaShow 2023-2",
+          "Diego Andrés Ayala Balaguera",
+          "https://skfb.ly/oMYnF"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod5.png",
+          "Media Show 2024-2",
+          "Miguel Angel Rojas Reyes",
+          "https://skfb.ly/oNp9y"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod6.png",
+          "Slim the Klown",
+          "Sergio Andrés Sánchez",
+          "https://skfb.ly/oNpq7"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod7.png",
+          "Spiderman Zombie",
+          "Sebastian Andres Palacio Cardenas",
+          "https://skfb.ly/oNprA"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod8.png",
+          "Forest Witch",
+          "Diego Guerrero",
+          "https://skfb.ly/oNpuO"
+        );
+        crearTarjeta(
+          "../pages/modelado/mod9.png",
+          "WIP",
+          "Paula Katalina Kligman Cubillos",
+          "https://skfb.ly/oNpvs"
+        );
+      } 
+      /////////////////////////////
+      /// VIDEOJUEGOS
+      
+      else if (type == "Videojuegos") {
+        categoria.innerHTML = "Mediashow<br />Videojuegos";
+        crearTarjeta(
+          "../pages/videpjuegos/game1.png",
+          "Trick or Bit",
+          "Sergio Origua <br /> Katalina Kligman <br />Jhoan Perez <br />Sofia Gomez",
+          "https://gumgio.itch.io/trick-or-bip"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game2.png",
+          "Juego Media Show 2023-2",
+          "ALAN STYLLIAN MORALES GUEVARA",
+          "https://asland27.itch.io/mediashow20232"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game3.png",
+          "The Maze",
+          "Angierick Vanegas Graterol <br />Lukas Santiago Chinome Pérez <br />Haider Danilo Rocha Urrego <br />Juan David Bustos Martínez",
+          "https://avgrat.itch.io/the-maze"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game4.png",
+          "Videojuego",
+          "Cristian Barrera",
+          "https://cristianb09.itch.io/juego01"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game5.png",
+          "Laberinto Media Show",
+          "Diego Fernando Jimenez Albornoz",
+          "https://diegojimenez.itch.io/laberintoto10"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game6.png",
+          "CreepyGame",
+          "Julian Santiago Muñoz Torres",
+          "https://mrmunozzz.itch.io/creepygame"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game7.png",
+          "To the Top",
+          "Francisco Javier Melo Rubio",
+          "https://sebasx23.itch.io/to-the-top"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game8.png",
+          "Fear Game",
+          "Alejandro Fonseca",
+          "https://taknof.itch.io/fear-game"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game9.png",
+          "Waka Mole",
+          "Sergio Andrés Sánchez",
+          "https://tauriel-pam.itch.io/waka-mole"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game10.png",
+          "shotgun'shell",
+          "Juan Sebastian Gravini Contreras",
+          "https://thevacuumgentleman.itch.io/shotgunshell"
+        );
+        crearTarjeta(
+          "../pages/videpjuegos/game11.png",
+          "Videojuego",
+          "Sergio Daniel Origua",
+          "https://gumgio.itch.io/mediashow-game1"
+        );
+        
+      } 
+      /////////////////////////////
+      /// MEDIASHORTS
+      else if (type == "MediaShorts") {
+        categoria.innerHTML = "Mediashow<br />MediaShorts";
+        
+        crearTarjeta(
+          "../pages/mediaashorts/short2.png",
+          "Vinculos Fragmentados",
+          "Albert Stiben Torres Merchan",
+          "https://youtube.com/playlist?list=PLcv86L5CA5nDC9FUKyWIIhzsJNa-ktgPx&si=9AwIHKbjNzht9V-D"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short3.png",
+          "Fe y amor",
+          "Jacobo Ordoñez",
+          "https://www.youtube.com/watch?v=LVE6qdSYJbk&ab_channel=JacoboOrdo%C3%B1ez"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short4.png",
+          "Jugando a enamorar",
+          "Juan Sebastian Rincón",
+          "https://www.youtube.com/watch?v=SGak0dlfO_s"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short5.png",
+          "cortometraje policiaco",
+          "Maria Paula Chavarrío Bautista",
+          "https://youtu.be/cB1wR4LpT1Y"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short6.png",
+          "Un mensaje del mañana",
+          "Carlos Alejandro Gómez Albarracín",
+          "https://www.youtube.com/playlist?list=PLveblxR9JGbnVA8wU87IXwwwsuvh9SDhR"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short7.png",
+          "La cueva",
+          "Julián David Pérez Vallejo",
+          "https://youtu.be/unpOlAkEfkM"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short8.png",
+          "LA HUERTA Y LA PAPARCA",
+          "Daniela campo, Antonella correa y Karen castaño",
+          "https://vimeo.com/882740114?share=copy"
+        );
+        // crearTarjeta(
+        //   "../pages/mediaashorts/short9.png",
+        //   "MediaShort",
+        //   "Evelyng Sánchez",
+        //   "https://drive.google.com/drive/folders/11oVCQ78TkeEQAPMOgLrc96fk5FNPsY4L"
+        // );
+        crearTarjeta(
+          "../pages/mediaashorts/short10.png",
+          "Stop Motion",
+          "Andres Felipe Esquivia Roa",
+          "https://drive.google.com/drive/folders/1VFVNbP0NdcDdoNtlZqoggsE84cSEjbxU?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/mediaashorts/short11.png",
+          "el abrazo eterno",
+          "Dayan Camilo Figueroa",
+          "https://youtu.be/ggaIfA4s9kU?si=Ss95SrnxMvvj36Y9"
+        );
+        // crearTarjeta(
+        //   "../pages/mediaashorts/short1.png",
+        //   "MediaShort",
+        //   "Dayan Camilo Figueroa",
+        //   "https://forms.office.com/r/b7dPxHrg7n?origin=QRCode"
+        // );
+      }
+      /////////////////////////////
+      /// DESARROLLO
+      else if (type == "Desarrollo") {
+        categoria.innerHTML = "Mediashow<br />Integración Multimedia";
+        crearTarjeta(
+          "../pages/desarrollo/des1.png",
+          "Virtua Spectre Project",
+          "Carlos Alejandro Gómez ALbarracín",
+          "https://virtuaspectreproject.000webhostapp.com"
+        );
+      }
+      /////////////////////////////
+      /// BACKING
+      else if (type == "Backing") {
+        categoria.innerHTML = "Mediashow<br />Backing Animado";
+        crearTarjeta(
+          "../pages/backing/anim1.png",
+          "Lucy",
+          "Juan Camilo Valdés Lozano",
+          "https://www.youtube.com/playlist?list=PL3DSH7KvJ78vvcsn2ykrlNC0aKgY_2C1X"
+        );
+        crearTarjeta(
+          "../pages/backing/anim2.png",
+          "Lofi final de terror",
+          "Valentina Grimaldi Torres",
+          "https://youtu.be/fgNgpt_z9uk"
+        );
+      }
+      /////////////////////////////
+      /// PITCH
+      else if (type == "Pitch") {
+        categoria.innerHTML = "Mediashow<br />Pitch";
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Andres Felipe Liberto Chaves",
+          "https://academiausbbogedu-my.sharepoint.com/:f:/g/personal/afliberatoc_academia_usbbog_edu_co/Ekgr2DYuEP5HlmxaZX3tyf0B-rRAf0F8-1Gaa6E546kUsg?e=gtNJgx"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "The sore feeling",
+          "Juan sebastian rincon villamil",
+          "https://drive.google.com/drive/folders/163TEV4A1bMZsdV1HBuR2Ss6ZbZN35-Ft?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Memorias de una muerte blanca",
+          "Katherine Guayazan",
+          "https://drive.google.com/drive/folders/17NCzUxhBfKotNp2nZ6zoIfiQuwDbBkv7?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Odisea Terrestre",
+          "Sadid Acosta",
+          "https://drive.google.com/drive/folders/1d_dQQ0DlHDeH8gmqdlCBITQt1QaFonNi?usp=sharing"
+        );
+        
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Luisa Fernanda González",
+          "https://drive.google.com/drive/folders/1ddjOM63tmIULC7_yLugMdj8gFxYuv14O?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Brayan zambrano poveda",
+          "https://drive.google.com/drive/folders/1gCJ0VuHW0t_RGbUHdDpDf0nBuhGz_LsN?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Fresas",
+          "David Suancha",
+          "https://drive.google.com/drive/folders/1HptnP6Ml_xPK0JH8r9UQdSM_ljeYLHtm?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Hormigas",
+          "Juan Diego sierra mendigana",
+          "https://drive.google.com/drive/folders/1KBAkEZ0zDxuX1GSBhib95rPcNmYaUJuK"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Peste en fuga",
+          "Karen Dayanna Quemba Cruz",
+          "https://drive.google.com/drive/folders/1KDPluUn-TgfUIeSeohk00A7do_TT46M0?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "El tercer mundo",
+          "Angely Parra Vallejo",
+          "https://drive.google.com/drive/folders/1KmgCxHQa4YTzLlmYxMKhHp_YLVSFG0DY?usp=sharing"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Distopia",
+          "Ángel Gabriel Quintero Morales",
+          "https://drive.google.com/drive/folders/1Lkat_1md2Q6xRjgcr2zz_5aBu9NPlrhA"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Hilos del Olvido",
+          "Paula Andrea Castro Molina",
+          "https://drive.google.com/drive/folders/1lrEkgr11LSzaLTQeibWgvlavXISxMqLY?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Juan David Hernández Pacanchique",
+          "https://drive.google.com/drive/folders/1QLl8MIbBmU8Ee2jj2VgeiLMwnzu6JeAH?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "VIAJE DE RECUERDOS",
+          "Sara Elizabeth Inguilar Muñoz",
+          "https://drive.google.com/drive/folders/1RSy54N_gqw4EXi14reKu2g2Rb8subwZ9"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Natalia Martin Coronado",
+          "https://drive.google.com/drive/folders/1tPcktYgA_ys5XrxGAXvV2PQYFaXcaq98?usp=drive_link"
+        );
+        
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Juan David Goyeneche",
+          "https://drive.google.com/drive/folders/1VWvpoKfyl4riyv-SpV7BQZ48A8tf5nB_?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "Pitch",
+          "Luis Miguel Guerrero",
+          "https://drive.google.com/drive/folders/1yvE14rXeHk76AMu_wvVntiMsMYLwyi7V?usp=drive_link"
+        );
+        crearTarjeta(
+          "../pages/pitch/pi1.png",
+          "IN SHOT",
+          "Luisa F. Africano Quiroga",
+          "https://drive.google.com/file/d/1kAcz8owRwhf3YRB2YMPzsKYDKIq6G-PY/view?usp=drivesdk"
+        );
+      }
+
+      function crearTarjeta(miniatura, titulo, autor, link) {
+        var createA = document.createElement("a");
+        createA.className = "tarjeta";
+        createA.setAttribute("href", link);
+        createA.setAttribute("target", "_blank");
+        capa.appendChild(createA);
+
+        var img = document.createElement("img");
+        img.src = miniatura;
+        img.className = "miniatura";
+        createA.appendChild(img);
+
+        var colum = document.createElement("div");
+        colum.className = "column";
+        createA.appendChild(colum);
+
+        var title = document.createElement("div");
+        title.innerHTML = titulo;
+        title.className = "titleproject";
+        colum.appendChild(title);
+
+        var divisor = document.createElement("div");
+        divisor.className = "separator";
+        colum.appendChild(divisor);
+
+        var creator = document.createElement("div");
+        creator.innerHTML = autor;
+        creator.className = "autor";
+        colum.appendChild(creator);
+      }
+    </script>
+  </body>
+</html>

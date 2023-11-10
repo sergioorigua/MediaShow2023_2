@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(35, 35, 35); */
+    /* background-image: url('../pages/kana.jpg'); */
+    background-size: cover;
+    background: rgb(103, 103, 103);
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+    background-position: center;
+}
+
+.container {
+    display: block;
+    /* background-image: url('../Imagenes/fondo2.png'); */
+    /* Define el tamaño del contenedor y sus estilos */
+    width: 100%; /* Puedes ajustar el ancho según tus necesidades */
+    max-width: 1200px; /* Puedes ajustar el ancho máximo según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    /* padding: px; Espacio adicional alrededor del contenido si lo deseas */
+    background: rgba(244, 244, 244, 0.8); 
+}
+.contenido{
+   background-image: url('../Imagenes/fondo2.png');
+    padding: 20px;
+}
+.titulo{
+    /* display: flex; */
+    position: absolute;
+    padding-top:16vw;
+    color: aliceblue;
+    padding-left: 6vw;
+    font-family: 'MontserratBold';
+}
+.tarjeta{
+    display: flex;
+    width: 80%;
+    margin-left: 5vw;
+    margin-top:2vw;
+    padding: 10px;
+    /* background-color: antiquewhite; */
+}
+.colum {
+    flex-direction: column;
+    margin-right: 10px;
+    flex: 1;
+  }
+div{
+    font-family: 'Montserrat';
+}
+  .colum div {
+    background-color: aqua;
+    font-size: 1.4rem;
+    padding: 0px 0px;
+  }
+  .miniatura{
+    display: flex;
+    width: 40%;
+    padding-right: 20px;
+  }
+  .titleproject{
+    padding: 10px;
+    font-size:2vw;
+    color: rgb(18, 30, 205);
+    font-family: 'MontserratBold';
+  }
+  .separator{
+    background-color: rgb(18, 30, 205);
+    width: 100%;
+    height: 2px;
+  }
+  .autor{
+    padding: 10px;
+    font-size: 1.5vw;
+    
+    color: rgb(18, 30, 205);
+  }
+  a {
+    text-decoration: none;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url('../pages/Montserrat-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "MontserratBold";
+    src: url('../pages/Montserrat-Bold.otf');
+    font-weight: normal;
+    font-style: bold;
+  }
